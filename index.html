@@ -1,0 +1,180 @@
+
+<!DOCTYPE htlm>
+<html lang="ja">
+<head>
+  <title>Mobile Programing</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8"/>
+  <meta name="description" content="Waseda">
+  <meta name="keywords" content="Waseda, Mobile, Programing">
+
+  <!-- device width, no scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- website icons -->
+  <link rel="icon" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="http://aimg-static.gree.net/ggp/img/2x/common/apple-touch-icon-precomposed.png" />
+
+  <link rel="stylesheet" href="test.css" type="test/css" />
+  <script type="text/javascript" src="http://zeptojs.com/zepto.min.js"></script>
+</head>
+
+<body>
+
+<header>
+  <a name="top"></a>
+  <h1>Mobile Programing</h1>
+</header>
+
+<nav>
+  <ul>
+    <li>section1</li>
+    <li>section2</li>
+    <li>section3</li>
+  </ul>
+</nav>
+<div id="content">
+
+
+<form>
+  <fieldset>
+    <legend>Form Catalog</legend>
+
+    <fieldset>
+    <legend>selectors</legend>
+
+    <!-- checkbox -->
+    <input type="checkbox" id="accept" name="accept">
+    <label for="accept">checkbox</label>
+
+    <!-- select list -->
+    <dl>
+      <dt><label for="select">Select</label></dt>
+      <dd>
+        <select id="select" name="select">
+          <optgroup label="group">
+          <option>option1</option>
+          <option>option2</option>
+          <option>option3</option>
+          </optgroup>
+        </select>
+      </dd>
+    </dl>
+    </fieldset>
+
+    <fieldset>
+    <legend>buttons</legend>
+
+    <!-- Buttons -->
+    <input type="image">
+    <input type="submit">
+    <input type="reset">
+    <input type="button">
+
+    </fieldset>
+
+    <!-- Text -->
+    <fieldset>
+    <legend>text</legend>
+
+    <dl>
+      <dt><label for="text">Text</label></dt>
+      <dd><input id="text" type="text" placeholder="some text"></dd>
+
+      <dt><label for="number">Number</label></dt>
+      <dd><input id="number" type="number" placeholder="12345"></dd>
+
+      <dt><label for="tel">Tel</label></dt>
+      <dd><input id="tel" type="tel" placeholder="090-1234-5678"></dd>
+
+      <dt><label for="email">Email</label></dt>
+      <dd><input id="email" type="email" placeholder="foo@bar.com"></dd>
+
+      <dt><label for="url">Url</label></dt>
+      <dd><input id="url" type="url" placeholder="foobar.com"></dd>
+
+      <dt><label for="password">Password</label></dt>
+      <dd><input id="password" type="password" placeholder="password"></dd>
+
+      <dt><label for="search">Search</label></dt>
+      <dd><input id="search" type="search" placeholder="search word"></dd>
+    </dl>
+    </fieldset>
+
+    <!-- Date / Time -->
+    <fieldset>
+    <legend>date/time</legend>
+
+    <dl>
+      <dt><label for="date">Date</label></dt>
+      <dd><input id="date" type="date"></dd>
+
+      <dt><label for="time">Time</label></dt>
+      <dd><input id="time" type="time"></dd>
+
+      <dt><label for="datetime">Datetime</label></dt>
+      <dd><input id="datetime" type="datetime"></dd>
+
+      <dt><label for="month">Month</label></dt>
+      <dd><input id="month" type="month"></dd>
+
+      <dt><label for="week">Week</label></dt>
+      <dd><input id="week" type="week"></dd>
+
+
+    </dl>
+    </fieldset>
+
+    <!-- File Selectors -->
+    <fieldset>
+    <legend>File Selections</legend>
+      <dt><label for="file">File</label></dt>
+      <dd><input id="file" type="file" name="file" multiple></dd>
+
+      <dt><label for="image">Image</label></dt>
+      <dd><input id="image" type="file" name="image" accept="image/*"></dd>
+
+      <dt><label for="video">Video</label></dt>
+      <dd><input id="video" type="file" name="video" accept="video/*"></dd>
+
+      <dt><label for="audio">Audio</label></dt>
+      <dd><input id="audio" type="file" name="audio" accept="audio/*"></dd>
+
+    </fieldset>
+    
+
+  </fieldset>
+
+</form>
+
+
+<div>
+<footer>
+  <ul>
+    <li>copyright</li>
+    <li>sitemap</li>
+    <li>contact</li>
+    <li><a href="#top">go to top</a></li>
+  </ul>
+</footer>
+
+
+<script type="text/javascript">
+//hide url area
+if(window.addEventListener){
+  window.addEventListener("load",function(){
+    setTimeout(window.scrollTo(0,1),0); 
+  });
+}
+
+//prompt
+//var input = window.prompt("hello");
+</script>
+
+</body>
+
+</html>
+
+
