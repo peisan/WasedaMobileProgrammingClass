@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>jQuery Mobile Lesson</title>
+
+<link rel="stylesheet"
+href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+
+<script type="text/javascript"
+src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+<script type="text/javascript"
+src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="top" data-role="page">
+
+<div data-role="header" data-position="fixed">
+<h1>jQuery Mobile</h1>
+<nav data-role="navbar" data-iconpos="left">
+<ul>
+<li><a href="#top" data-icon="home" class="ui-btn-active">Home</a></li>
+<li><a href="#form_catalog" data-icon="gear">forms</a></li>
+<li><a href="#info" data-icon="info">Info</a></li>
+</ul>
+</nav>
+</div>
+
+<!--
+<p>
+［<a href="#top">Top</a>］
+［<a href="#form_catalog">Form Catalog</a>］
+［<a href="#info">Info</a>］
+</p>
+
+  <header data-role="header">
+  <h1>jQuery Mobile</h1>
+  </header>
+-->
+
+  <div data-role="content">
+  <p>Hello jQuery Mobile！</p>
+  </div>
+
+  <div data-role="collapsible">
+  <h3>Collapsible Section</h3>
+  <p>This part is collasped</p>
+  </div>
+
+  <div data-role="content">
+  <ul data-role="listview">
+    <li>List1</li>
+    <li>List2</li>
+    <li>List3</li>
+  </ul>
+  </div>
+
+  <footer data-role="footer">
+  Copyright 2013, Ippei Arita
+  </footer>
+</div>
+
+<div id="form_catalog" data-role="page">
+
+<div data-role="header" data-position="fixed">
+<h1>jQuery Mobile</h1>
+<nav data-role="navbar" data-iconpos="left">
+<ul>
+<li><a href="#top" data-icon="home" class="ui-btn-active">Home</a></li>
+<li><a href="#form_catalog" data-icon="gear">forms</a></li>
+<li><a href="#info" data-icon="info">Info</a></li>
+</ul>
+</nav>
+</div>
+
+  <header data-role="header">
+  <h1>Form Lesson</h1>
+  </header>
+
+  <div data-role="content">
+    <form method="POST" action="process.php">
+    <div data-role="fieldcontain">
+
+    <label for="basic_name">Text:</label>
+    <input id="basic_name" name="basic_name" type="text" value="" placeholder="please input" />
+
+    <label for="basic_number">Number:</label>
+    <input id="basic_number" name="basic_number" type="number" value="" placeholder="please input" />
+
+    <label for="basic_color">Color:</label>
+    <input id="basic_color" name="basic_color" type="color" value="" placeholder="please input" />
+
+    <label for="basic_body">textarea</label>
+    <textarea id="basic_body" name="basic_body"></textarea>
+
+    <label for="basic_range">range</label>
+    <input id="basic_range" name="basic_range" type="range"
+    min="0" max="100" step="5" value="20" />
+
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+      <legend>radio</legend>
+      <input id="basic_radio_vb" name="basic_radio"
+      type="radio" value="vb" />
+      <label for="basic_radio_vb">Visual Basic</label>
+      <input id="basic_radio_cs" name="basic_radio"
+      type="radio" value="cs" checked />
+      <label for="basic_radio_cs">C#</label>
+      <input id="basic_radio_java" name="basic_radio"
+      type="radio" value="java" />
+      <label for="basic_radio_java">Java</label>
+      </fieldset>
+    </div>
+
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>checkbox</legend>
+        <input id="basic_checkbox_app" name="basic_checkbox"
+        type="checkbox" value="app" />
+        <label for="basic_checkbox_app">リンゴ</label>
+        <input id="basic_checkbox_ora" name="basic_checkbox"
+        type="checkbox" value="ora" checked />
+        <label for="basic_checkbox_ora">ミカン</label>
+        <input id="basic_checkbox_mel" name="basic_checkbox"
+        type="checkbox" value="mel" />
+        <label for="basic_checkbox_mel">メロン</label>
+      </fieldset>
+    </div>
+
+    <div data-role="fieldcontain">
+      <label for="basic_art">options</label>
+      <select name="basic_art" data-native-menu="false" multiple>
+      <!--<select name="basic_art">-->
+        <option>選択してください。</option>
+        <optgroup label="初めてのHTML5開発">
+          <option value="html5_01">Geolocation</option>
+          <option value="html5_02">Web Storage</option>
+          <option value="html5_03">ドラッグ＆ドロップ</option>
+        </optgroup>
+        <optgroup label="逆引きjQuery">
+          <option value="refjQuery_01">セレクタ</option>
+          <option value="refjQuery_02">属性＆コンテンツ</option>
+          <option value="refjQuery_03">トラバーシング</option>
+          <option value="refjQuery_04">エフェクト</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <div data-role="fieldcontain">
+      <label for="basic_mail">option</label>
+      <select name="basic_mail" data-role="slider">
+        <option value="no">不要</option>
+        <option value="yes" selected>必要</option>
+      </select>
+    </div>
+
+    <input type="submit" value="submit" />
+    <input type="reset" value="reset" />
+    <input type="image" value="image" />
+    <input type="button" value="button" />
+    <button>button要素</button>
+    <a href="#" data-role="button">アンカータグ</a>
+
+
+    <input type="submit" value="submit" />
+    </div>
+    </form>
+  </div>
+  <footer data-role="footer">
+  Copyright 2012, Ippei Arita
+  </footer>
+</div>
+
+
+<div id="info" data-role="page">
+
+<div data-role="header" data-position="fixed">
+<h1>jQuery Mobile</h1>
+<nav data-role="navbar" data-iconpos="left">
+<ul>
+<li><a href="#top" data-icon="home" class="ui-btn-active">Home</a></li>
+<li><a href="#form_catalog" data-icon="gear">forms</a></li>
+<li><a href="#info" data-icon="info">Info</a></li>
+</ul>
+</nav>
+</div>
+
+
+Info
+</div>
+
+
+</body>
+</html>
+
