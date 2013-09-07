@@ -1,0 +1,96 @@
+<!DOCTYPE htlm>
+<html lang="ja">
+<head>
+  <title>Mobile Programing</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8"/>
+  <meta name="description" content="Waseda">
+  <meta name="keywords" content="Waseda, Mobile, Programing">
+
+  <!-- device width, no scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- website icons -->
+  <link rel="icon" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- base stylesheet -->
+  <link rel="stylesheet" href="main.css" type="text/css"/>
+  <!-- SP stylesheet -->
+  <link rel="stylesheet" href="sp.css" type="text/css" media="only screen and (max-device-width:480px)"/>
+
+  <script type="text/javascript" src="http://zeptojs.com/zepto.min.js"></script>
+</head>
+
+<body>
+
+<header>
+  <a name="top"></a>
+  <h1>JS Sample</h1>
+</header>
+
+<div id="content">
+
+  <div id="touch1" class="touch">
+    Touch Start 
+  </div>
+  
+  <div id="touch2" class="touch">
+    Click
+  </div>
+  
+  <div id="touch3" class="touch">
+    Touch Move 
+  </div>
+  
+  <div id="touch4" class="touch">
+    Touch End 
+  </div>
+
+</div>
+
+<footer>
+  <ul>
+  </ul>
+</footer>
+
+
+<script type="text/javascript">
+//hide url area
+if(window.addEventListener){
+  window.addEventListener("load",function(){
+    setTimeout(window.scrollTo(0,1),0); 
+  });
+}
+
+$('#touch1').bind("touchstart",function(event){
+  alert("touch1");
+});
+
+$('#touch2').bind("click",function(event){
+  alert("touch2");
+});
+
+$('#touch3').bind("touchend",function(event){
+  alert("touch3");
+});
+
+$('#touch4').bind("touchmove",function(event){
+  alert("touch4");
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
+
+
+
