@@ -39,11 +39,9 @@ input[type=image]{
 
 /* elements */
 h1{
-  border: 20px;
+  border: 20px solid grey;
   font-size: 32px;
 }
-
-
 
 /* CSS Selectors */
 /* works only with CSS3 */
@@ -58,5 +56,9 @@ input:valid:not([type=file]) {
 
 .rounded {
  border-radius: 10px;
+}
+
+.bordered {
+  border: 2px solid black;
 }
 
