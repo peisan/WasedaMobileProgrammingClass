@@ -20,7 +20,7 @@
   <!-- SP stylesheet -->
   <link rel="stylesheet" href="sp.css" type="text/css" media="only screen and (max-device-width:480px)"/>
 
-  <script type="text/javascript" src="http://zeptojs.com/zepto.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 </head>
 
 <body>
@@ -31,6 +31,18 @@
 </header>
 
 <div id="content">
+
+  <div id="ajax_txt" class="touch">
+    <div id="ajax_txt_result">click to get text</div>
+  </div>
+
+  <div id="ajax_html" class="touch">
+    <div id="ajax_html_result">click to get html</div>
+  </div>
+
+  <div id="ajax_json" class="touch">
+    <div id="ajax_json_result">click to get json</div>
+  </div>
 
   <div id="touch1" class="touch">
     Touch Start 
@@ -64,6 +76,32 @@ if(window.addEventListener){
   });
 }
 
+$('#ajax_txt').bind("click",function(event){
+  $.get('data/test.txt', function(data) {
+    console.log(data)
+    $('#ajax_txt_result').text(data);
+  });
+});
+
+$('#ajax_html').bind("click",function(event){
+  $.get('data/test.html', function(data) {
+    console.log(data)
+    $('#ajax_html_result').html(data);
+  });
+});
+
+$('#ajax_json').bind("click",function(event){
+  $.getJSON('data/test.json', function(data) {
+    console.log(data)
+    $('#ajax_json_result').text(JSON.stringify(data));
+  });
+});
+
+
+
+
+
+/* Touch Events */
 $('#touch1').bind("touchstart",function(event){
   alert("touch1");
 });
@@ -79,10 +117,6 @@ $('#touch3').bind("touchend",function(event){
 $('#touch4').bind("touchmove",function(event){
   alert("touch4");
 });
-
-
-
-
 
 
 
