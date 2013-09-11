@@ -12,6 +12,8 @@
   width: 100%;
 }
 
+
+
 /* colors for valid and invalid form*/
 input:valid:not([type=file]) {
   border: 1px solid green;
@@ -41,6 +43,22 @@ input[type=image]{
 h1{
   border: 20px solid grey;
   font-size: 32px;
+}
+
+h2{
+  font-size: 20px;
+}
+
+ul {
+  margin: 10;
+  list-style-type: square;
+}
+
+ul li
+{
+  margin: 10;
+  list-style-type: square;
+  background-position: 0px 5px; 
 }
 
 /* CSS Selectors */
