@@ -1,0 +1,40 @@
+* {
+margin:8px
+background-color:#0f0f0f;
+text-align:center;
+}
+
+body{
+	background-image:url("favicon.png");
+	background-repeat:repeat-x;
+}
+h1{
+	font-size:20px;
+	color:#ff00ff;
+}
+
+#main{
+	text-align:left;
+	border-bottom:solid 1px #00f00f;
+	border-left:solid 10px #00f00f;
+}
+
+ul{
+	list-style-type:square;
+}
+
+ul li{
+	text-align:left;
+	font-size:16px;
+}
+
+span.question{
+	margin:0px;
+}
+
+#accept{
+	
+
+	
+
+

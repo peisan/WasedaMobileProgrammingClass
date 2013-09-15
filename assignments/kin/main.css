@@ -1,0 +1,80 @@
+/* reset default mergins, colors, fonts, etc */
+
+* {
+  margin: 0;
+  padding: 0;
+//  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent
+  width: 100%;
+}
+
+#myName{
+	font-size:18px;
+	font:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-style:italic;
+	}
+
+/* colors for valid and invalid form*/
+input:valid:not([type=file]) {
+  border: 1px solid green;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:focus {
+  border: 2px solid blue;
+}
+
+input[type=image]{
+  width: 30px;
+}
+
+
+/* media queries */
+@media only screen and (orientation: portrait){
+}
+
+@media only screen and (orientation: landscape){
+}
+
+/* elements */
+h1
+  font-size: 32px;
+}
+
+h2{
+  font-size: 20px;
+}
+
+ul {
+  margin: 10;
+  list-style-type: square;
+}
+
+ul li
+{
+  margin: 10;
+  list-style-type: square;
+  background-position: 0px 5px; 
+}
+
+/* CSS Selectors */
+/* works only with CSS3 */
+
+
+input:valid:not([type=file]) {
+  border: 1px solid green;
+}
+
+.rounded {
+ border-radius: 10px;
+}
+
+.bordered {
+  border: 2px solid black;
+}

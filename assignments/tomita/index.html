@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Myinfo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!--Google Chart Giograph-->
+	<script type="text/javascript" src="//www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load('visualization', '1', {packages: ['geochart']});
+
+    function drawVisualization() {
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Times'],
+        ['United States', 6],
+        ['Canada', 1],
+        ['Korea', 3],
+        ['Indonesia', 2],
+        ['Australia', 3]
+      ]);
+    
+      var geochart = new google.visualization.GeoChart(
+          document.getElementById('visualization'));
+      geochart.draw(data, {width: 320, height: 347});
+    }
+    
+
+    google.setOnLoadCallback(drawVisualization);
+  </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<!-- navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  
+        </button>
+        <a class="navbar-brand" href="#top">Shun Tomita</a>
+      </div>
+	  
+	  <div class="collapse navbar-collapse target">
+        <ul class="nav navbar-nav">
+          <li><a href="#top"><span class="glyphicon glyphicon-arrow-up"></span></a></li>
+        </ul>
+		<ul class="nav navbar-nav">
+          <li><a href="#bday"><span class="glyphicon glyphicon-star-empty"></span></a></li>
+		</ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#hometown"><span class="glyphicon glyphicon-home"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#music"><span class="glyphicon glyphicon-headphones"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#world"><span class="glyphicon glyphicon-plane"></span></a></li>
+        </ul>
+		<ul class="nav navbar-nav">
+          <li><a href="#contact"><span class="glyphicon glyphicon-envelope"></span></a></li>
+        </ul>
+      </div>
+    </nav>
+      
+    </nav>
+	<!--top image-->
+	<div class="container text-center" id="top" style="margin-top:60px">
+		<img src="http://24.media.tumblr.com/1fe171b2a1e7b89c01789472ce3ee7bf/tumblr_ms978mu0nl1qf3l82o1_500.jpg" alt="" style="width: 300px; height: 225px;" class="img-rounded">
+		<a href="#bday"><div class="glyphicon glyphicon-chevron-down"style="margin-bottom:30px"></div></a>
+	</div>
+	
+	<div class="container text-center">
+		<!--bday layout-->
+		<div id="bday" class="" style="padding-top:90px">
+			<span ><a href="http://www.amazon.co.jp/registry/wishlist/34ARYQ1GAEUDI/">Birthday:11.13.'93</a></span>
+				<div class="progress progress-striped active">
+					<div class="progress-bar"  role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%"></div>
+						<span class="badge">61</span>
+				</div>
+				<div class=""style="margin-top:200px"><a href="#hometown"><span class="glyphicon glyphicon-chevron-down"></span></a></div>
+		</div>
+		<!--hometown layout-->
+		<div id="hometown" style="margin-bottom:90px"></div>
+			<div class="glyphicon glyphicon-home">
+			<div>Hiroshima</div>
+			<a href="#music"><span class="glyphicon glyphicon-chevron-down" style="margin-top:200px"></span></a>
+		</div>
+		<!--music layout-->
+		<div id="music" style="margin-bottom:60px"></div>
+		<div class="panel panel-warning">
+			<div class="panel-heading">Like</div>
+				<ul class="list-group">
+					<li class="list-group-item">Michael Bubulé</li>
+					<li class="list-group-item">Star Wars</li>
+					<li class="list-group-item">Only NY</li>
+				</ul>
+		</div>
+			<a href="#world"><span class="glyphicon glyphicon-chevron-down" style="margin-top:150px"></span></a>
+		<!--world layout-->
+		<div id="world" style="margin-bottom:60px"></div>
+		<div class="well well-sm" >Countries I've been to</div>
+		<div id="visualization">
+		</div>
+		<a href="#contact"><span class="glyphicon glyphicon-chevron-down"></span></a>
+		<!--contact layout-->
+		<div id="contact" style="margin-bottom:60px"></div>
+		<form class="form-horizontal" style="padding:10px">
+			<span class="glyphicon glyphicon-envelope"></span>
+			<div class="form-group row">
+				<label for="name" class="col-xs-2 control-label">Name</label>
+					<div class="col-xs-8">
+						<input type="text" id="name" class="form-control"  placeholder="Tom Cruise">
+					</div>
+			</div>
+			<div class="form-group row">
+				<label class="control-label col-xs-2" for="emailaddress">Email</label>
+						<div class="col-xs-8"><input type="text" id="emailaddress" class="form-control" placeholder="xxx@example.com">
+						</div>
+			</div>
+			<div>
+				<label class="control-label col-xs-2" style="margin:10px">Message</label>
+					<textarea class="form-control" rows="3"></textarea>
+			</div>
+			<div class="form-group row container">
+        <input type="submit" value="submit" class="btn btn-primary" id="send" style="margin:10px">
+			</div>
+	</div>
+		</form>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="//code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+  <script type="text/javascript">
+		
+		var e = document.getElementById("send");
+		e.onclick = function () {
+						alert("ありがとうございます");
+		};
+	<!-- hide url area -->
+	if(window.addEventListener){
+		window.addEventListener("load",function(){
+			setTimeout(window.scrollTo(0,1),0); 
+		});
+	}
+		//誕生日カウント.テスト
+		//var now = new Date();
+		//var xday = new Date(1993, 11-1, 13);
+		//var count = Math.ceil( (xday.getTime() - now.getTime()) / (24*60*60*1000) );
+
+	</script>
+</html>
