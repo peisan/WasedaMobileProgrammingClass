@@ -1,5 +1,4 @@
-<!DOCTYPE htlm>
-<html lang="ja">
+<!DOCTYPE htlm> <html lang="ja">
 <head>
   <title>Self Introduction</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -23,9 +22,38 @@
 
 <body>
 
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button id="bt" class="navbar-toggle" data-toggle="collapse" data-target=".target">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">Home</a>
+  </div>
+
+  <div id="um" class="collapse navbar-collapse target">
+    <ul class="nav navbar-nav">
+      <li><a href="#about"><span class="glyphicon glyphicon-info-sign"></span>About</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="#job_career"><span class="glyphicon glyphicon-wrench">Job Career</span></a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="#academic_career"><span class="glyphicon glyphicon-pencil"></span>Academic Career</a></li> 
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="#hobby"><span class="glyphicon glyphicon-star">Hobby</span></a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="#food"><span class="glyphicon glyphicon-cutlery">Food</a></span></li>
+    </ul>
+
+  </div>
+</nav>
+
 <header>
-  <a name="top"></a>
-  <h1>Self Intro</h1>
+  <h1>Self Introduction</h1>
 </header>
 
 <div id="content">
@@ -34,49 +62,60 @@
 This page is for Self Introduction Assignment
 </div>
 
-<nav class="bordered">
-  <h2>Index</h2>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#job_career">Job Career</a></li>
-    <li><a href="#academic_career">Academic Career</a></li> 
-    <li><a href="#hobby">Hobby</a></li>
-  </ul>
-</nav>
-
 <div id="about" class="bordered">
-<h2>About</h2>
-<div>Name: Ippei Arita</div>
-<div>Age: 31</div>
-<img src="image/profile.jpg" width=100></img>
+  <h2>About</h2>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="image/profile.jpg" class="img-circle" width=100></img>
+    </div>
+    <div class="col-sm-9">
+      <table id="table" class="table table-striped table-bordered table-hover">
+        <tr><td>Name</td><td>Ippei Arita</td></tr>
+        <tr><td>Age</td><td>31</td></tr>
+        <tr><td>Hometown</td><td>Nagoya</td></tr>
+      </table>
+    </div>
+  </div>
 </div>
 
 <div id="job_career" class="bordered">
-<h2>Job Career</h2>
-<ul>
-<li>Cambridge Energy Data Lab</li>
-<li>GREE</li>
-<li>JP Morgan</li>
-</ul>
+  <h2>Job Career</h2>
+  <ul>
+    <li><a href="http://camenergydatalab.com/">Cambridge Energy Data Lab</a></li>
+    <li><a href="http://gree.net/">GREE</a></li>
+    <li><a href="http://www.jpmorgan.com/">JP Morgan</a></li>
+  </ul>
 </div>
 
 <div id="academic_career" class="bordered">
-<h2>Academic Career</h2>
-<ul>
-<li>Waseda University</li>
-<li>Tokei High School</li>
-</ul>
-
+  <h2>Academic Career</h2>
+  <ul>
+    <li><a href="http://www.waseda.jp/">Waseda University</a></li>
+    <li><a href="http://www.tokai-jh.ed.jp/">Tokei High School</a></li>
+  </ul>
 </div>
 
 <div id="hobby" class="bordered">
-<h2>Hobby</h2>
-<ul>
-<li>Surging</li>
-<li>Snowboarding</li>
-<li>Trecking</li>
-<li>Football</li>
-</ul>
+  <h2>Hobby</h2>
+  <ul>
+    <li>Surfing</li>
+    <li>Snowboarding</li>
+    <li>Trecking</li>
+    <li>Football</li>
+  </ul>
+</div>
+
+<div id="travel" class="bordered">
+  <h2>Travel</h2>
+  Map of countries I visited!
+  <div id="chart_div"></div>
+<div>
+
+<div id="food" class="bordered">
+  <h2>Food</h2>
+   <ul>
+    <li>anything delicious :)</li>
+  </ul>
 </div>
 
 <footer>
@@ -84,6 +123,13 @@ This page is for Self Introduction Assignment
     <li>Copyright 2013, Ippei Arita</li>
   </ul>
 </footer>
+
+<!-- CDN -->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 
 <script type="text/javascript">
@@ -94,9 +140,50 @@ if(window.addEventListener){
   });
 }
 
-//prompt
-//var input = window.prompt("hello");
+// collapse nav on click
+$("#um").bind("click", function(){
+  $("#um").addClass("collapse");
+  $("#um").removeClass("in");
+});
+
 </script>
+
+<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+<script type='text/javascript'>
+ google.load('visualization', '1', {'packages': ['geochart']});
+ google.setOnLoadCallback(drawRegionsMap);
+
+  function drawRegionsMap() {
+    var data = google.visualization.arrayToDataTable([
+      ['Country'],
+      // Amarica
+      ['United States'],
+      ['Canada'],
+      // Europe
+      ['Germany'],
+      ['Itally'],
+      ['Netherlands'],
+      ['Russia'],
+      ['Malta'],
+      ['Turkey'],
+      // Asia
+      ['Japan'],
+      ['Malaysia'],
+      ['Taiwan'],
+      ['Hong Kong'],
+      ['Thailand'],
+      ['Indonesia'],
+      ['Cambodia'],
+      ['Australia'],
+    ]);
+
+    var options = {};
+
+    var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+};
+</script>
+
 
 </body>
 
